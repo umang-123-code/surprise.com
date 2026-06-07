@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SurpriseBox — Plan the Perfect Surprise</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="logo">🎁</span>
+      <span>SurpriseBox</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#ideas">Ideas</a></li>
+      <li><a href="#planner">Planner</a></li>
+      <li><a href="#messages">Messages</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('planner').scrollIntoView({behavior:'smooth'})">Start Planning</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#ideas">Ideas</a>
+    <a href="#planner">Planner</a>
+    <a href="#messages">Messages</a>
+    <button class="btn btn-primary" onclick="document.getElementById('planner').scrollIntoView({behavior:'smooth'}); closeMobileMenu()">Start Planning</button>
+  </div>
+
+  <div class="bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+
+  <header class="hero">
+    <div class="hero-content reveal">
+      <p class="hero-tag">✨ Make moments unforgettable</p>
+      <h1>Create the perfect <span class="gradient-text">surprise</span> for someone you love</h1>
+      <p class="hero-desc">Plan birthdays, anniversaries, reunions, and heartfelt surprises — step by step, stress-free.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="document.getElementById('planner').scrollIntoView({behavior:'smooth'})">Plan a Surprise</button>
+        <button class="btn btn-secondary" onclick="document.getElementById('ideas').scrollIntoView({behavior:'smooth'})">Browse Ideas</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>50+</strong><span>Surprise ideas</span></div>
+        <div class="stat"><strong>8</strong><span>Occasions</span></div>
+        <div class="stat"><strong>100%</strong><span>Free to use</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-frame">
+        <div class="floating-card card-1">
+          <span>🎂</span>
+          <div><strong>Birthday</strong><p>Surprise planned!</p></div>
+        </div>
+        <div class="floating-card card-2">
+          <span>💌</span>
+          <div><strong>Message</strong><p>Secret note ready</p></div>
+        </div>
+        <div class="floating-card card-3">
+          <span>🎉</span>
+          <div><strong>Countdown</strong><p>3 days to go!</p></div>
+        </div>
+        <div class="hero-gift">🎁</div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="section about-section">
+    <div class="section-header reveal">
+      <span class="section-label">Why SurpriseBox</span>
+      <h2>Turn your love into a beautiful moment</h2>
+      <p>We help you plan, organize, and execute surprises that your friends and family will remember forever.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">💡</div>
+        <h3>50+ Ideas</h3>
+        <p>Curated surprise ideas for every occasion — birthday, anniversary, reunion, and more.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">📋</div>
+        <h3>Smart Planner</h3>
+        <p>Get a custom timeline, checklist, and tips based on who you're surprising.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">💌</div>
+        <h3>Message Cards</h3>
+        <p>Design beautiful secret message cards and preview them before the big reveal.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🔒</div>
+        <h3>Keep It Secret</h3>
+        <p>Built-in checklist ensures you don't miss a step and spoil the surprise.</p>
+      </div>
+    </div>
+
+    <div class="steps-row reveal">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h4>Choose Idea</h4>
+        <p>Pick from our gallery or use the planner</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h4>Plan Details</h4>
+        <p>Set date, budget, and surprise type</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h4>Execute</h4>
+        <p>Follow timeline and checklist</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <h4>Celebrate</h4>
+        <p>Enjoy their priceless reaction!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="section portfolio-section">
+    <div class="section-header reveal">
+      <span class="section-label">Our Portfolio</span>
+      <h2>Real surprises, real smiles</h2>
+      <p>See how others created magical moments for their loved ones. Get inspired for your next surprise.</p>
+    </div>
+
+    <div class="portfolio-grid" id="portfolioGrid"></div>
+  </section>
+
+  <section class="section testimonials-section">
+    <div class="section-header reveal">
+      <span class="section-label">Testimonials</span>
+      <h2>What people are saying</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"I planned my mom's 50th birthday using SurpriseBox. The timeline and checklist made everything so easy. She cried happy tears!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">P</div>
+          <div><strong>Priya Sharma</strong><span>Mumbai</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Surprised my best friend at the airport after 2 years. The reunion ideas section gave me the perfect plan. Worth it!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div><strong>Arjun Patel</strong><span>Ahmedabad</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"The message card builder is beautiful. I made an anniversary card for my wife and she loved the design."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">R</div>
+          <div><strong>Rahul Mehta</strong><span>Delhi</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ideas" class="section ideas-section">
+    <div class="section-header reveal">
+      <span class="section-label">Get Inspired</span>
+      <h2>Surprise Ideas</h2>
+      <p>Pick an occasion and get inspired. Filter by who you're surprising and what mood you want.</p>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="birthday">Birthday</button>
+      <button class="filter-btn" data-filter="anniversary">Anniversary</button>
+      <button class="filter-btn" data-filter="reunion">Reunion</button>
+      <button class="filter-btn" data-filter="achievement">Achievement</button>
+      <button class="filter-btn" data-filter="just-because">Just Because</button>
+    </div>
+
+    <div class="ideas-grid" id="ideasGrid"></div>
+  </section>
+
+  <section id="planner" class="section planner-section">
+    <div class="section-header reveal">
+      <span class="section-label">Plan It</span>
+      <h2>Surprise Planner</h2>
+      <p>Fill in the details and we'll build a custom plan with timeline, checklist, and tips.</p>
+    </div>
+
+    <div class="planner-container">
+      <form class="planner-form" id="plannerForm">
+        <div class="form-group">
+          <label for="personName">Who are you surprising?</label>
+          <input type="text" id="personName" placeholder="e.g. Mom, Best friend Rahul" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="relationship">Relationship</label>
+            <select id="relationship" required>
+              <option value="">Select...</option>
+              <option value="family">Family</option>
+              <option value="friend">Friend</option>
+              <option value="partner">Partner</option>
+              <option value="colleague">Colleague</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="occasion">Occasion</label>
+            <select id="occasion" required>
+              <option value="">Select...</option>
+              <option value="birthday">Birthday</option>
+              <option value="anniversary">Anniversary</option>
+              <option value="reunion">Reunion / Visit</option>
+              <option value="achievement">Achievement</option>
+              <option value="just-because">Just Because</option>
+              <option value="farewell">Farewell</option>
+              <option value="festival">Festival</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="surpriseDate">Surprise date</label>
+            <input type="date" id="surpriseDate" required>
+          </div>
+          <div class="form-group">
+            <label for="budget">Budget (optional)</label>
+            <select id="budget">
+              <option value="low">Low — thoughtful & free</option>
+              <option value="medium" selected>Medium — ₹500–2000</option>
+              <option value="high">High — go all out</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="surpriseType">Type of surprise</label>
+          <select id="surpriseType" required>
+            <option value="">Select...</option>
+            <option value="party">Surprise party / gathering</option>
+            <option value="gift">Gift reveal</option>
+            <option value="trip">Trip / outing</option>
+            <option value="decor">Room / home decoration</option>
+            <option value="video">Video message compilation</option>
+            <option value="dinner">Special dinner</option>
+            <option value="custom">Something custom</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Extra details (optional)</label>
+          <textarea id="notes" rows="3" placeholder="Their favorite things, allergies, who else is involved..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Generate My Plan</button>
+      </form>
+
+      <div class="plan-output" id="planOutput">
+        <div class="plan-placeholder">
+          <span class="placeholder-icon">✨</span>
+          <h3>Your plan will appear here</h3>
+          <p>Fill out the form and hit "Generate My Plan" to get a personalized surprise roadmap.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="checklist" class="section checklist-section">
+    <div class="section-header reveal">
+      <span class="section-label">Stay Organized</span>
+      <h2>Universal Surprise Checklist</h2>
+      <p>Never forget a step. Check items off as you go — progress saves automatically.</p>
+    </div>
+
+    <div class="checklist-progress">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <span class="progress-text" id="progressText">0 of 12 done</span>
+    </div>
+
+    <ul class="checklist" id="checklist"></ul>
+    <button class="btn btn-secondary" id="resetChecklist">Reset Checklist</button>
+  </section>
+
+  <section id="messages" class="section messages-section">
+    <div class="section-header reveal">
+      <span class="section-label">Express Love</span>
+      <h2>Secret Message Cards</h2>
+      <p>Write a heartfelt note and preview how it'll look when you reveal it.</p>
+    </div>
+
+    <div class="message-builder">
+      <div class="message-form">
+        <div class="form-group">
+          <label for="msgTo">To</label>
+          <input type="text" id="msgTo" placeholder="Their name">
+        </div>
+        <div class="form-group">
+          <label for="msgFrom">From</label>
+          <input type="text" id="msgFrom" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="msgOccasion">Occasion</label>
+          <input type="text" id="msgOccasion" placeholder="Happy Birthday!">
+        </div>
+        <div class="form-group">
+          <label for="msgBody">Your message</label>
+          <textarea id="msgBody" rows="5" placeholder="Write something from the heart..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Card style</label>
+          <div class="style-picker">
+            <button type="button" class="style-btn active" data-style="warm">Warm</button>
+            <button type="button" class="style-btn" data-style="elegant">Elegant</button>
+            <button type="button" class="style-btn" data-style="fun">Fun</button>
+            <button type="button" class="style-btn" data-style="minimal">Minimal</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-preview" id="messagePreview">
+        <div class="card-preview warm" id="cardPreview">
+          <p class="card-occasion" id="previewOccasion">Happy Birthday!</p>
+          <p class="card-to" id="previewTo">Dear Friend,</p>
+          <p class="card-body" id="previewBody">Your message will appear here...</p>
+          <p class="card-from" id="previewFrom">— With love</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-box reveal">
+      <h2>Ready to create a magical surprise?</h2>
+      <p>Start planning today — it's free, fun, and made with love.</p>
+      <button class="btn btn-primary btn-lg" onclick="document.getElementById('planner').scrollIntoView({behavior:'smooth'})">Plan Your Surprise Now</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand-block">
+        <div class="footer-brand">
+          <span class="logo">🎁</span>
+          <span>SurpriseBox</span>
+        </div>
+        <p>Made with love — because the best gifts are the ones that come from the heart.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#ideas">Ideas</a>
+        <a href="#planner">Planner</a>
+      </div>
+      <div class="footer-links">
+        <h4>Tools</h4>
+        <a href="#checklist">Checklist</a>
+        <a href="#messages">Message Cards</a>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2026 SurpriseBox. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
